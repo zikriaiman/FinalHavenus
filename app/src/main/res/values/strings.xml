@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">FinalHavenus</string>
+    <string name="app_name">project_mad_homepage</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="click_to_login">Click to Login</string>
+    <string name="click_to_register">Click to Register</string>
+    <string name="logout">Logout</string>
+    <string name="default_web_client_id">259710888960-jm4f684egbmq49j2019ec9abota89slc.apps.googleusercontent.com</string>
 </resources>

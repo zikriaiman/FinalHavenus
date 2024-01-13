@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_havenus_madihah"
+    app:startDestination="@id/DestHome">
+
+    <activity
+        android:id="@+id/DestHome"
+        android:name="com.example.finalhavenus.registration.MainActivity"
+        android:label="MainActivity" />
+    <activity
+        android:id="@+id/introActivity"
+        android:name="com.example.finalhavenus.registration.IntroActivity"
+        android:label="IntroActivity" />
+    <navigation android:id="@+id/navModule1"
+        app:startDestination="@id/module1Fragment">
+        <fragment
+            android:id="@+id/module1Fragment"
+            android:name="emergency.Module1Fragment"
+            android:label="fragment_module1"
+            tools:layout="@layout/fragment_module1" />
+        <activity
+            android:id="@+id/DestSOSButton"
+            android:name="emergency.SOSButtonActivity"
+            android:label="activity_sos_button"
+            tools:layout="@layout/activity_sos_button" />
+        <activity
+            android:id="@+id/DestSOSButtonAfterPressed"
+            android:name="emergency.SOSButtonAfterPressed"
+            android:label="activity_sos_button_after_pressed"
+            tools:layout="@layout/activity_sos_button_after_pressed" />
+    </navigation>
+    <navigation android:id="@+id/navModule2"
+        app:startDestination="@id/module2Fragment">
+        <fragment
+            android:id="@+id/module2Fragment"
+            android:name="safety.Module2Fragment"
+            android:label="fragment_module2"
+            tools:layout="@layout/fragment_module2" />
+        <navigation android:id="@+id/navSelfDefence"
+            app:startDestination="@id/DestSelfDefence">
+            <fragment
+                android:id="@+id/DestSelfDefence"
+                android:name="safety.SelfDefenceTechniquesFragment"
+                android:label="fragment_self_defence_techniques"
+                tools:layout="@layout/fragment_self_defence_techniques" />
+            <fragment
+                android:id="@+id/DestTechniqueOne"
+                android:name="safety.TechniqueOneFragment"
+                android:label="fragment_technique_one"
+                tools:layout="@layout/fragment_technique_one" />
+            <fragment
+                android:id="@+id/DestTechniqueTwo"
+                android:name="safety.TechniqueTwoFragment"
+                android:label="fragment_technique_two"
+                tools:layout="@layout/fragment_technique_two" />
+            <fragment
+                android:id="@+id/DestTechniqueThree"
+                android:name="safety.TechniqueThreeFragment"
+                android:label="fragment_technique_three"
+                tools:layout="@layout/fragment_technique_three" />
+            <fragment
+                android:id="@+id/DestTechniqueFour"
+                android:name="safety.TechniqueFourFragment"
+                android:label="fragment_technique_four"
+                tools:layout="@layout/fragment_technique_four" />
+        </navigation>
+    </navigation>
+    <navigation android:id="@+id/navModule3"
+        app:startDestination="@id/module3Fragment">
+        <fragment
+            android:id="@+id/module3Fragment"
+            android:name="community.Module3Fragment"
+            android:label="fragment_module3"
+            tools:layout="@layout/fragment_module3" />
+    </navigation>
+    <navigation android:id="@+id/navModule4"
+        app:startDestination="@id/module4Fragment">
+        <fragment
+            android:id="@+id/module4Fragment"
+            android:name="empowerment.Module4Fragment"
+            android:label="fragment_module4"
+            tools:layout="@layout/fragment_module4" />
+    </navigation>
+</navigation>

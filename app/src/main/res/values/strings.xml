@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">FinalHavenus</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="click_to_login">Click to Login</string>
+    <string name="click_to_register">Click to Register</string>
+    <string name="logout">Logout</string>
+    <string name="default_web_client_id">259710888960-jm4f684egbmq49j2019ec9abota89slc.apps.googleusercontent.com</string>
+
+    <string name="technique_one_description">When to use it: \nUse this from a distance as a way of setting a strong body-language boundary (like if somebody\'s following you) or when you\'re engaged in sending physical strikes.\n\nHow to do it: \n1. Stand with your feet shoulder-width apart and your hands by your sides. \n2. Keeping your toes pointed forward, take a natural step forward with your non-dominant leg, so your feet are staggered. \n3. Bend both knees slightly, elevate the back heel, bring your hands up with your hands about 12 inches from your face and your palms facing forward, tuck your chin, and shrug your shoulders slightly. \n4. Distribute your body weight between both feet, placing it more in the balls versus heels.</string>
+    <string name="technique_two_description">When to use it: This is a last-resort move to create escape opportunities. It\'s best used when the face of the attacker isn\'t blocked or covered, and you can reach the face with your arms outstretched.\n\nHow to do it: \n1. Start in Ready Stance and keep your hands up. \n2. Rotating your left hip and shoulder, explosively extend your left palm straight out, with your fingertips straight up and elbow down. \n3. Keep your right hand up to protect your face. \n4. Immediately recoil your left arm, returning your shoulder and hip to the square ready stance.\n5. With your feet in the same position, send a palm strike with your right hand (be sure to rotate right hip), then try a left-right combination. If you are left-handed, practice a right-left combination. \n6. Your hand should stay open (i.e., don\'t make a fist) and the heel of your palm should make contact with the attacker\'s nose.</string>
+    <string name="technique_three_description">When to use it: \nThis is another last-resort move to create escape opportunities. It\'s particularly beneficial against somebody who\'s tall, especially if you can\'t reach their face for Palm-Heel Strikes.\n\nHow to do it: \n1. Start in Ready Stance, keeping hands up. \n2. Bend your right leg and drive your right knee straight up. \n3. As soon as the right knee is above your waistline, extend your hips (almost bend backward to generate power in the left leg/your loading leg) and kick your right shin directly to the attacker\'s groin, making sure to keep your toes pointed downward and out of the way. \n4. Immediately release your right foot behind you and return to Ready Stance.</string>
+    <string name="technique_four_description">When to use it: \nRely on the Hammerfist Punch move in almost any situation where you find yourself in danger. It\'s most effective, though, when used to hit the attacker directly in the face, particularly the nose, jaw, or temple.\n\nHow to do it: \n1. Start in Ready Stance. \n2. Raise your dominant hand up, bending at the elbow (like you\'re preparing to throw a ball). \n3. Rotate your hips toward attacker and bring your dominant arm down, smacking the attacker in face (aim for the nose) with the meaty bottom part of fist. \n4. If you\'re practicing this move, recoil to Ready Stance and repeat. \n5. In a real-world scenario, strike the punch and run while the attacker is incapacitated.</string>
+    <string name="app_name">Havenus</string>
+    <string name="sos_instruction">Hold down the SOS button to discreetly \nalert your emergency contacts, with your \ncurrent location.</string>
+    <string name="sos_reassuring">Your well-being matters, and help \nis on the way with a single touch.</string>
+    <string name="contacts_alerted">Your contacts have been alerted.\nStay put and calm.\nContact authorities if situation \nescalates.</string>
+    <string name="Module2">Safety Measures</string>
 </resources>

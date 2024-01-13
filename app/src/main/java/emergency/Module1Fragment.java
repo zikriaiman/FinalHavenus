@@ -72,14 +72,15 @@ public class Module1Fragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
         // Emergency Contacts
-        /*Button buttonEmergencyContacts = view.findViewById(R.id.buttonEmergencyContacts);
-        View.OnClickListener OCLbuttonEmergencyContacts = new View.OnClickListener() {
+        Button buttonLiveLocation = view.findViewById(R.id.buttonLiveLocation);
+        View.OnClickListener OCLbuttonLiveLocation = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //
+                Intent i = new Intent(getActivity(), LocationSharingActivity.class);
+                startActivity(i);
             }
         };
-        buttonEmergencyContacts.setOnClickListener(OCLbuttonEmergencyContacts); */
+        buttonLiveLocation.setOnClickListener(OCLbuttonLiveLocation);
 
         // Live Location
         /*Button buttonLiveLocation = view.findViewById(R.id.buttonLiveLocation);
@@ -96,7 +97,6 @@ public class Module1Fragment extends Fragment {
         View.OnClickListener OCLbuttonSOS = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Navigation.findNavController(view).navigate(R.id.DestSOSButton);
                 Intent i = new Intent(getActivity(), SOSButtonActivity.class);
                 startActivity(i);
             }

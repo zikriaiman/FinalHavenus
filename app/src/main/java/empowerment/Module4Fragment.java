@@ -1,13 +1,19 @@
 package empowerment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.finalhavenus.R;
+
+import emergency.LocationSharingActivity;
+import emergency.SOSButtonActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,5 +67,19 @@ public class Module4Fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_module4, container, false);
+    }
+
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+
+        // Emergency Contacts
+        Button buttonMenstrualHealthGame = view.findViewById(R.id.buttonMenstrualHealthGame);
+        View.OnClickListener OCLbuttonMenstrualHealthGame = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), MenstrualHealthGame.class);
+                startActivity(i);
+            }
+        };
+        buttonMenstrualHealthGame.setOnClickListener(OCLbuttonMenstrualHealthGame);
     }
 }

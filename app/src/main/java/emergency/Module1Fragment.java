@@ -101,5 +101,16 @@ public class Module1Fragment extends Fragment {
             }
         };
         buttonSOS.setOnClickListener(OCLbuttonSOS);
+
+        // emergency Button
+        Button buttonEmergency = view.findViewById(R.id.buttonEmergencyContacts);
+        View.OnClickListener OCLbuttonEmergency = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), ContactActivity.class);
+                startActivity(i);
+            }
+        };
+        buttonSOS.setOnClickListener(OCLbuttonEmergency);
     }
 }

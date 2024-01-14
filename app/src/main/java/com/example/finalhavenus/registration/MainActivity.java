@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     TextView textEmail, textName, textBirthday, textNumber;
     FirebaseUser user;
     FirebaseDatabase db;
-    DatabaseReference ref;
+    DatabaseReference ref, refP;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,40 +49,69 @@ public class MainActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         button = findViewById(R.id.logout);
+        edit = findViewById(R.id.editProfile);
         textEmail = findViewById(R.id.user_email);
         textName = findViewById(R.id.user_name);
+        textBirthday = findViewById(R.id.user_birthday);
+        textNumber = findViewById(R.id.user_number);
         user = auth.getCurrentUser();
         String userId = user.getUid();
         ref = FirebaseDatabase.getInstance().getReference().child("users").child(userId);
+        refP = FirebaseDatabase.getInstance().getReference().child("profile").child(userId);
         if(user == null){
             Intent intent = new Intent(getApplicationContext(), Login.class);
             startActivity(intent);
             finish();
         }
-        else{
-            ref.addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    Users user = snapshot.getValue(Users.class);
-                    name = user.getName();
-                    email = user.getEmail();
 
-                    textEmail.setText(email);
-                    textName.setText(name);
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Users user = snapshot.getValue(Users.class);
+                name = user.getName();
+                email = user.getEmail();
+                textEmail.setText(email);
+                textName.setText(name);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        refP.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()) {
+                    Profile user = snapshot.getValue(Profile.class);
+                    birthday = user.getBirthday();
+                    number = user.getNumber();
+                    textBirthday.setText(birthday);
+                    textNumber.setText(number);
                 }
+            }
 
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
-                }
-            });
-        }
+            }
+        });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(getApplicationContext(), Login.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), editActivity.class);
                 startActivity(intent);
             }
         });
@@ -139,12 +168,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        edit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), editActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 }

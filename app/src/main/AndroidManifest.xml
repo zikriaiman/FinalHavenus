@@ -85,6 +85,9 @@
         <activity
             android:name="safety.violenceStep"
             android:exported="true"/>
+        <activity
+            android:name="emergency.ContactActivity"
+            android:exported="false"/>
 
         <meta-data
             android:name="preloaded_fonts"

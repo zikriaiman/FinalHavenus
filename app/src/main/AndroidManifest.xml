@@ -74,6 +74,17 @@
         <activity
             android:name="empowerment.MenstrualHealthGameResult"
             android:exported="true"/>
+
+        <activity
+            android:name="safety.domesticViolMenu"
+            android:exported="true"/>
+        <activity
+            android:name="safety.homeSafetyPlan"
+            android:exported="true"/>
+        <activity
+            android:name="safety.violenceStep"
+            android:exported="true"/>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

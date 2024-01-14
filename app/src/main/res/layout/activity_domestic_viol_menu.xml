@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".homeSafetyPlan">
+    tools:context="safety.homeSafetyPlan">
 
     <ImageView
         android:id="@+id/imageViewBG"
         android:layout_width="430dp"
         android:layout_height="803dp"
-        android:background="@drawable/untitled_design"
+        android:background="@drawable/appbackground"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

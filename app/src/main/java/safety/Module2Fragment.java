@@ -1,5 +1,6 @@
 package safety;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,10 +11,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.Navigation;
 
 import com.example.finalhavenus.R;
 import androidx.fragment.app.FragmentManager;
+
+import emergency.LocationSharingActivity;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link Module2Fragment#newInstance} factory method to
@@ -71,15 +74,16 @@ public class Module2Fragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
-        // Safety Plans
-        /*Button buttonSafetyPlans = view.findViewById(R.id.buttonSafetyPlans);
+        // Safety Plan
+        Button buttonSafetyPlans = view.findViewById(R.id.buttonSafetyPlans);
         View.OnClickListener OCLbuttonSafetyPlans = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //
+                Intent i = new Intent(getActivity(), homeSafetyPlan.class);
+                startActivity(i);
             }
         };
-        buttonSafetyPlans.setOnClickListener(OCLbuttonSafetyPlans); */
+        buttonSafetyPlans.setOnClickListener(OCLbuttonSafetyPlans);
 
         // Safety Check-In
         /*Button buttonSafetyCheckIn = view.findViewById(R.id.buttonSafetyCheckIn);

@@ -10,7 +10,6 @@ import android.widget.Button;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
 import com.example.finalhavenus.R;
 
@@ -70,8 +69,18 @@ public class Module1Fragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-
         // Emergency Contacts
+        /*Button buttonLiveLocation = view.findViewById(R.id.buttonLiveLocation);
+        View.OnClickListener OCLbuttonLiveLocation = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //
+            }
+        };
+        buttonLiveLocation.setOnClickListener(OCLbuttonLiveLocation);*/
+
+
+        // Live Location
         Button buttonLiveLocation = view.findViewById(R.id.buttonLiveLocation);
         View.OnClickListener OCLbuttonLiveLocation = new View.OnClickListener() {
             @Override
@@ -81,16 +90,6 @@ public class Module1Fragment extends Fragment {
             }
         };
         buttonLiveLocation.setOnClickListener(OCLbuttonLiveLocation);
-
-        // Live Location
-        /*Button buttonLiveLocation = view.findViewById(R.id.buttonLiveLocation);
-        View.OnClickListener OCLbuttonLiveLocation = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //
-            }
-        };
-        buttonLiveLocation.setOnClickListener(OCLbuttonLiveLocation);*/
 
         // SOS Button
         Button buttonSOS = view.findViewById(R.id.buttonSOS);

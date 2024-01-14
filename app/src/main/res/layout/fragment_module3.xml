@@ -18,15 +18,15 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Community" />
+        app:title="Personal Tools" />
 
     <Button
-        android:id="@+id/buttonDiscussionForm"
+        android:id="@+id/buttonChatBot"
         android:layout_width="250dp"
         android:layout_height="70dp"
         android:layout_marginTop="150dp"
         android:background="@color/btncolor_purple"
-        android:text="Discussion Forum"
+        android:text="Chat Bot"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -35,29 +35,29 @@
         app:layout_constraintTop_toBottomOf="@+id/TBModule3"/>
 
     <Button
-        android:id="@+id/buttonRealTimeChat"
+        android:id="@+id/buttonPersonalisedJournal"
         android:layout_width="250dp"
         android:layout_height="70dp"
         android:layout_marginTop="32dp"
         android:background="@color/btncolor_purple"
-        android:text="Real Time Chat"
+        android:text="Personalised Journal"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonDiscussionForm" />
+        app:layout_constraintTop_toBottomOf="@id/buttonChatBot" />
 
-    <Button
-        android:id="@+id/buttonUserGenContent"
-        android:layout_width="250dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/btncolor_purple"
-        android:text="User Generated Content"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonRealTimeChat" />
+<!--    <Button-->
+<!--        android:id="@+id/buttonUserGenContent"-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:background="@color/btncolor_purple"-->
+<!--        android:text="User Generated Content"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/buttonPersonalisedJournal" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

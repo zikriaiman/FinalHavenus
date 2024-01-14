@@ -5,5 +5,10 @@
     <color name="btncolor_purple">#9B72CF</color>
     <color name="purple">#9B72CF</color>
     <color name="purplelight">#9B72CF</color>
+    <color name="purple_1">#673AB7</color>
+    <color name="back_color">#13253D</color>
+    <color name="bot_back_color">#203757</color>
+    <color name="user_back_color">#6965FF</color>
+    <color name="fab_color">#6B6AFF</color>
 
 </resources>

@@ -1,13 +1,28 @@
 package community;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.finalhavenus.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import emergency.SOSButtonActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +39,11 @@ public class Module3Fragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    RecyclerView postRecyclerView;
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
+
 
     public Module3Fragment() {
         // Required empty public constructor
@@ -61,5 +81,19 @@ public class Module3Fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_module3, container, false);
+
+    }
+
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        // Chat Bot
+        Button buttonChatBot = view.findViewById(R.id.buttonChatBot);
+        View.OnClickListener OCLbuttonChatBot = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), ChatBotMainActivity.class);
+                startActivity(i);
+            }
+        };
+        buttonChatBot.setOnClickListener(OCLbuttonChatBot);
     }
 }

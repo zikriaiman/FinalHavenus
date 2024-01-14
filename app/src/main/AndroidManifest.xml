@@ -20,6 +20,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -96,6 +97,9 @@
         <activity
             android:name="empowerment.empResc"
             android:exported="true"/>
+        <activity
+            android:name="community.ChatBotMainActivity"
+            android:exported="false"/>
 
         <meta-data
             android:name="preloaded_fonts"

@@ -35,29 +35,29 @@
         app:layout_constraintTop_toBottomOf="@+id/TBModule2"/>
 
     <Button
-        android:id="@+id/buttonSafetyCheckIn"
+        android:id="@+id/buttonSelfDef"
         android:layout_width="250dp"
         android:layout_height="70dp"
         android:layout_marginTop="32dp"
         android:background="@color/btncolor_purple"
-        android:text="Safety Check-In"
+        android:text="Self Defence Techniques"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/buttonSafetyPlans" />
 
-    <Button
-        android:id="@+id/buttonSelfDef"
-        android:layout_width="250dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/btncolor_purple"
-        android:text="Self Defence"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonSafetyCheckIn" />
+<!--    <Button-->
+<!--        android:id="@+id/buttonSelfDef"-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:background="@color/btncolor_purple"-->
+<!--        android:text="Self Defence"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/buttonSafetyCheckIn" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

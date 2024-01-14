@@ -95,7 +95,7 @@ public class Module2Fragment extends Fragment {
         };
         buttonSafetyCheckIn.setOnClickListener(OCLbuttonSafetyCheckIn);*/
 
-        // SOS Button
+        // Self Defence Techniques
         Button buttonSelfDef = view.findViewById(R.id.buttonSelfDef);
         View.OnClickListener OCLbuttonSelfDef = new View.OnClickListener() {
             @Override

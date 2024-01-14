@@ -117,12 +117,3 @@ public class empResc extends AppCompatActivity {
         webView.loadUrl(url);
     }
 
-    @Override
-    public void onBackPressed() {
-        // Override the back button functionality to go back to the XML layout
-        super.onBackPressed();
-        Intent intent = new Intent(this, empResc.class);
-        startActivity(intent);
-        finish(); // Finish the current activity to prevent stacking on the back stack
-    }
-}

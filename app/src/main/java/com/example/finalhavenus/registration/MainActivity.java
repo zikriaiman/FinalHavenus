@@ -28,9 +28,9 @@ import safety.Module2Fragment;
 public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth auth;
-    String name, email;
-    Button button, bm1, bm2, bm3, bm4;
-    TextView textEmail, textName;
+    String name, email, birthday, number;
+    Button button, bm1, bm2, bm3, bm4, edit;
+    TextView textEmail, textName, textBirthday, textNumber;
     FirebaseUser user;
     FirebaseDatabase db;
     DatabaseReference ref;
@@ -84,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(getApplicationContext(), Login.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -137,6 +136,14 @@ public class MainActivity extends AppCompatActivity {
                 fragmentTransaction.replace(R.id.fragment_container, fragment); // Use your container ID
                 fragmentTransaction.addToBackStack(null); // Add this line if you want to enable back navigation
                 fragmentTransaction.commit();
+            }
+        });
+
+        edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), editActivity.class);
+                startActivity(intent);
             }
         });
     }

@@ -17,6 +17,7 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -90,6 +91,10 @@
             android:exported="false"/>
         <activity
             android:name=".registration.editActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name="empowerment.empResc"
             android:exported="true"/>
 
         <meta-data

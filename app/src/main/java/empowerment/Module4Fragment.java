@@ -71,7 +71,18 @@ public class Module4Fragment extends Fragment {
 
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
-        // Emergency Contacts
+        // Empowerment Resources
+        Button buttonEmpowermentResources = view.findViewById(R.id.buttonEmpowermentResources);
+        View.OnClickListener OCLbuttonEmpowermentResources = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), empResc.class);
+                startActivity(i);
+            }
+        };
+        buttonEmpowermentResources.setOnClickListener(OCLbuttonEmpowermentResources);
+
+        // Menstrual Health Game
         Button buttonMenstrualHealthGame = view.findViewById(R.id.buttonMenstrualHealthGame);
         View.OnClickListener OCLbuttonMenstrualHealthGame = new View.OnClickListener() {
             @Override

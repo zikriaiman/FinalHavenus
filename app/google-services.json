@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "813245673105",
+    "project_id": "finalhavenus-160a9",
+    "storage_bucket": "finalhavenus-160a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813245673105:android:005242ec065a7a7e0cd930",
+        "android_client_info": {
+          "package_name": "com.example.finalhavenus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZH33bheE-42YhYUk87_LMMfAv9qKAMUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

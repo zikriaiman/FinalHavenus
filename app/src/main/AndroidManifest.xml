@@ -18,6 +18,7 @@
     <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:usesCleartextTraffic="true"
@@ -72,12 +73,23 @@
             android:name="empowerment.MenstrualHealthGame"
             android:exported="true"/>
         <activity
+            android:name="empowerment.GoalTracker"
+            android:exported="true"/>
+        <activity
             android:name="empowerment.MenstrualHealthGameQuestions"
             android:exported="true"/>
         <activity
             android:name="empowerment.MenstrualHealthGameResult"
             android:exported="true"/>
-
+        <activity
+            android:name="empowerment.AddImageGoal"
+            android:exported="true"/>
+        <activity
+            android:name="empowerment.AddList"
+            android:exported="true"/>
+        <activity
+            android:name="empowerment.UpdateGoal"
+            android:exported="true"/>
         <activity
             android:name="safety.domesticViolMenu"
             android:exported="true"/>
@@ -93,7 +105,6 @@
         <activity
             android:name=".registration.editActivity"
             android:exported="true"/>
-
         <activity
             android:name="empowerment.empResc"
             android:exported="true"/>
@@ -101,9 +112,23 @@
             android:name="community.ChatBotMainActivity"
             android:exported="false"/>
 
+        <activity
+            android:name="community.AddImage"
+            android:exported="false"/>
+        <activity
+            android:name="community.AddPost"
+            android:exported="false"/>
+        <activity
+            android:name="community.MainActivity"
+            android:exported="false"/>
+        <activity
+            android:name="community.UpdateActivity"
+            android:exported="false"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
     </application>
+
 
 </manifest>

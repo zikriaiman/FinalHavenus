@@ -95,5 +95,16 @@ public class Module3Fragment extends Fragment {
             }
         };
         buttonChatBot.setOnClickListener(OCLbuttonChatBot);
+
+
+        // Journal
+        Button buttonPersonalisedJournal = view.findViewById(R.id.buttonPersonalisedJournal);
+        buttonPersonalisedJournal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), MainActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }

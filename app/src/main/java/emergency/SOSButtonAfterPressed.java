@@ -30,7 +30,7 @@ public class SOSButtonAfterPressed extends AppCompatActivity {
 
             public void onClick(View view) {
                 //String phoneNumber = "+601131566914";
-                String[] emergencyContacts = {"+601131566914"};
+                String[] emergencyContacts = {"+601131566914", "+60169097647"};
                 String update = EnterUpdateET.getText().toString();
                 try {
                     SmsManager smsManager=SmsManager.getDefault();
@@ -101,7 +101,7 @@ public class SOSButtonAfterPressed extends AppCompatActivity {
         String message = "Reason for SOS: " + selectedStatus;
 
         // Replace with the actual phone numbers of your emergency contacts
-        String[] emergencyContacts = {"+601131566914"};
+        String[] emergencyContacts = {"+601131566914", "+60169097647"};
 
         // Send SMS to emergency contacts
         for (String contact : emergencyContacts) {

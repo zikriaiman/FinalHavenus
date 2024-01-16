@@ -92,5 +92,16 @@ public class Module4Fragment extends Fragment {
             }
         };
         buttonMenstrualHealthGame.setOnClickListener(OCLbuttonMenstrualHealthGame);
+
+        // Goal Tracker
+        Button buttonGoalsAndTracker = view.findViewById(R.id.buttonGoalsAndTracker);
+        View.OnClickListener OCLbuttonGoalsAndTracker = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), GoalTracker.class);
+                startActivity(i);
+            }
+        };
+        buttonGoalsAndTracker.setOnClickListener(OCLbuttonGoalsAndTracker);
     }
 }

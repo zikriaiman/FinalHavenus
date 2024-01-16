@@ -27,7 +27,7 @@ public class SOSButtonActivity extends AppCompatActivity {
 
     private static final int PERMISSION_REQUEST_CODE = 1;
 
-    private static final long LONG_PRESS_DURATION = 5000; // 5 seconds
+    private static final long LONG_PRESS_DURATION = 10000; // 5 seconds
     private Handler handler = new Handler();
     private boolean isLongPress = false;
 
@@ -153,10 +153,16 @@ public class SOSButtonActivity extends AppCompatActivity {
         // Implement your logic to send the SOS message with location here
         // You can use SMS, email, or any other communication method
         // Compose a message with the current location
-        String phoneNumber = "601131566914";
+        //String phoneNumber = "+60169097647";
+        String[] emergencyContacts = {"+601131566914", "+60169097647"};
         String message = "SOS! This message is to notify you that I am in an emergency. My current location is: https://maps.google.com/?q=" + latitude + "," + longitude;
+        // Replace with the actual phone numbers of your emergency contacts
 
-        sendSMS(phoneNumber, message);
+
+        // Send SMS to emergency contacts
+        for (String contact : emergencyContacts) {
+            sendSMS(contact, message);
+        }
     }
 
     private void navigateToSOSButtonAfterPressed() {

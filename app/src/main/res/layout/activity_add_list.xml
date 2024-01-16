@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/addPostHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="23dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Add List"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/saveButton"
+        android:layout_width="39dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/addPostHeading"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-2dp"
+        android:layout_marginEnd="28dp"
+        android:src="@drawable/baseline_done_24" />
+
+
+    <EditText
+        android:id="@+id/titleeditText"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addPostHeading"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="69dp"
+        android:background="@drawable/border"
+        android:fontFamily="@font/montserrat"
+        android:hint="Enter the topic"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/contenteditText"
+        android:layout_width="374dp"
+        android:layout_height="543dp"
+        android:layout_below="@+id/titleeditText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/border"
+        android:gravity="top"
+        android:hint="Elaborate..."
+        android:padding="12dp"
+        android:textSize="18sp" />
+
+</RelativeLayout>

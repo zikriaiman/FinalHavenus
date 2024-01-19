@@ -29,7 +29,6 @@ public class SOSButtonAfterPressed extends AppCompatActivity {
         SendUpdateButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                //String phoneNumber = "+601131566914";
                 String[] emergencyContacts = {"+601131566914", "+60169097647"};
                 String update = EnterUpdateET.getText().toString();
                 try {
@@ -52,37 +51,36 @@ public class SOSButtonAfterPressed extends AppCompatActivity {
     }
 
     private void showReasonsDialog() {
-        // Get the list of status options (you can replace it with your own array)
+        // Get the list of reason options
         final String[] reasonOptions = {"Accident/Injury", "Natural Disaster", "Medical Emergency", "Safety Concerns"};
 
         // Create a dialog builder
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Select Status");
+        builder.setTitle("Select Reason");
 
         // Set up the dropdown menu
         builder.setItems(reasonOptions, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-                String selectedStatus = null;
+                String selectedReason = null;
 
                 if (reasonOptions[which].equals("Accident/Injury")) {
-                    selectedStatus = "Involved in an accident or injured, require immediate rescue or medical attention.";
+                    selectedReason = "Involved in an accident or injured, require immediate rescue or medical attention.";
                 }
                 else if (reasonOptions[which].equals("Natural Disaster")) {
-                    selectedStatus = "Caught in a natural disaster (e.g., earthquake, flood), need rescue and evacuation.";
+                    selectedReason = "Caught in a natural disaster (e.g., earthquake, flood), need rescue and evacuation.";
                 }
                 else if (reasonOptions[which].equals("Medical Emergency")) {
-                    selectedStatus = "I'm experiencing a severe medical issue and need urgent assistance.";
+                    selectedReason = "I'm experiencing a severe medical issue and need urgent assistance.";
                 }
                 else if (reasonOptions[which].equals("Safety Concerns")) {
-                    selectedStatus = "Feeling threatened or in an unsafe situation, need immediate help.";
+                    selectedReason = "Feeling threatened or in an unsafe situation, need immediate help.";
                 }
 
-                // Handle the selected status, you might want to send an SMS or perform other actions
-                sendStatusUpdate(selectedStatus);
+                sendReason(selectedReason);
 
-                // Close the dialog (optional)
+                // Close the dialog
                 dialog.dismiss();
             }
         });
@@ -92,15 +90,9 @@ public class SOSButtonAfterPressed extends AppCompatActivity {
         dialog.show();
     }
 
-    private void sendStatusUpdate(String selectedStatus) {
-        // Implement logic to send a status update message
-        // Use location services to get the current location if needed
-        // Send SMS or use other communication methods to notify emergency contacts
+    private void sendReason(String selectedReason) {
+        String message = "Reason for SOS: " + selectedReason;
 
-        // Example: Format the message with the selected status
-        String message = "Reason for SOS: " + selectedStatus;
-
-        // Replace with the actual phone numbers of your emergency contacts
         String[] emergencyContacts = {"+601131566914", "+60169097647"};
 
         // Send SMS to emergency contacts
@@ -113,21 +105,13 @@ public class SOSButtonAfterPressed extends AppCompatActivity {
         try {
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage(phoneNumber, null, message, null, null);
-            // Success message (optional)
+            // Success message
             Toast.makeText(this, "Alert sent successfully", Toast.LENGTH_SHORT).show();
-
-            // Additional actions (optional)
-            // For example, you might want to log the successful sending of the alert
-            // Log.d("SendSMS", "Alert sent to " + phoneNumber + ": " + message);
 
         } catch (Exception e) {
             e.printStackTrace();
-            // Handle the exception (e.g., show an error message)
+            // Handle the exception (show an error message)
             Toast.makeText(this, "Failed to send alert. Please try again.", Toast.LENGTH_SHORT).show();
-
-            // Additional error handling (optional)
-            // For example, you might want to log the error for debugging purposes
-            // Log.e("SendSMS", "Error sending alert to " + phoneNumber + ": " + e.getMessage());
         }
     }
 }

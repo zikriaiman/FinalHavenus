@@ -67,7 +67,6 @@ public class SOSButtonActivity extends AppCompatActivity {
     }
 
     private void handleLongPress() {
-        // Implement your logic for long press (5 seconds) here
         if (checkLocationPermission()) {
             getLocation();
             navigateToSOSButtonAfterPressed();
@@ -131,34 +130,20 @@ public class SOSButtonActivity extends AppCompatActivity {
         try {
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage(phoneNumber, null, message, null, null);
-            // Success message (optional)
+            // Success message
             Toast.makeText(this, "Alert sent successfully", Toast.LENGTH_SHORT).show();
-
-            // Additional actions (optional)
-            // For example, you might want to log the successful sending of the alert
-            // Log.d("SendSMS", "Alert sent to " + phoneNumber + ": " + message);
 
         } catch (Exception e) {
             e.printStackTrace();
-            // Handle the exception (e.g., show an error message)
+            // Handle the exception (show an error message)
             Toast.makeText(this, "Failed to send alert. Please try again.", Toast.LENGTH_SHORT).show();
-
-            // Additional error handling (optional)
-            // For example, you might want to log the error for debugging purposes
-            // Log.e("SendSMS", "Error sending alert to " + phoneNumber + ": " + e.getMessage());
         }
     }
 
     private void sendSOSMessage(double latitude, double longitude) {
-        // Implement your logic to send the SOS message with location here
-        // You can use SMS, email, or any other communication method
-        // Compose a message with the current location
-        //String phoneNumber = "+60169097647";
         String[] emergencyContacts = {"+601131566914", "+60169097647"};
         String message = "SOS! This message is to notify you that I am in an emergency. My current location is: https://maps.google.com/?q=" + latitude + "," + longitude;
-        // Replace with the actual phone numbers of your emergency contacts
-
-
+       
         // Send SMS to emergency contacts
         for (String contact : emergencyContacts) {
             sendSMS(contact, message);

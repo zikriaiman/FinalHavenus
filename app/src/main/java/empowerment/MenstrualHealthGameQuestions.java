@@ -1,5 +1,4 @@
 package empowerment;
-//import static android.os.Build.VERSION_CODES.R;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -40,7 +39,7 @@ public class MenstrualHealthGameQuestions extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menstrual_health_game_questions);
 
-        // Initialize your views
+        // Initialize views
         questionImageView = findViewById(R.id.header_picture);
         questionTextView = findViewById(R.id.question);
         questionNumberTextView = findViewById(R.id.questionNumber);
@@ -50,7 +49,7 @@ public class MenstrualHealthGameQuestions extends AppCompatActivity {
         radioButton4 = findViewById(R.id.radioButton4);
         submitButton = findViewById(R.id.submitButton);
 
-        // Initialize questionList with your questions
+        // Initialize questionList
         questionList = getQuestions();
 
         // Display the first question
@@ -58,7 +57,6 @@ public class MenstrualHealthGameQuestions extends AppCompatActivity {
     }
 
     private List<Question> getQuestions() {
-        // Add your questions here
         List<Question> questions = new ArrayList<>();
 
         List<String> options1 = Arrays.asList("" +
@@ -260,7 +258,6 @@ public class MenstrualHealthGameQuestions extends AppCompatActivity {
         intent.putExtra("SCORE_EXTRA", score);
         startActivity(intent);
 
-        // Finish the current activity if needed
         finish();
     }
 

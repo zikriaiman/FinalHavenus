@@ -78,8 +78,8 @@ public class SelfDefenceTechniquesFragment extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
                 TechniqueOneFragment fragment = new TechniqueOneFragment();
-                fragmentTransaction.replace(R.id.fragment_container, fragment); // Use your container ID
-                fragmentTransaction.addToBackStack(null); // Add this line if you want to enable back navigation
+                fragmentTransaction.replace(R.id.fragment_container, fragment);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         };
@@ -93,8 +93,8 @@ public class SelfDefenceTechniquesFragment extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
                 TechniqueTwoFragment fragment = new TechniqueTwoFragment();
-                fragmentTransaction.replace(R.id.fragment_container, fragment); // Use your container ID
-                fragmentTransaction.addToBackStack(null); // Add this line if you want to enable back navigation
+                fragmentTransaction.replace(R.id.fragment_container, fragment);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         };
@@ -108,8 +108,8 @@ public class SelfDefenceTechniquesFragment extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
                 TechniqueThreeFragment fragment = new TechniqueThreeFragment();
-                fragmentTransaction.replace(R.id.fragment_container, fragment); // Use your container ID
-                fragmentTransaction.addToBackStack(null); // Add this line if you want to enable back navigation
+                fragmentTransaction.replace(R.id.fragment_container, fragment);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         };
@@ -123,8 +123,8 @@ public class SelfDefenceTechniquesFragment extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
                 TechniqueFourFragment fragment = new TechniqueFourFragment();
-                fragmentTransaction.replace(R.id.fragment_container, fragment); // Use your container ID
-                fragmentTransaction.addToBackStack(null); // Add this line if you want to enable back navigation
+                fragmentTransaction.replace(R.id.fragment_container, fragment);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         };

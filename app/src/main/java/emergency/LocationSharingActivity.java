@@ -136,7 +136,7 @@ public class LocationSharingActivity extends AppCompatActivity {
     }
 
     private void openContactPicker() {
-        // Open the contact picker or use your own logic to select contacts
+        // Open the contact picker to select contacts
         Intent contactPickerIntent = new Intent(Intent.ACTION_PICK, Uri.parse("content://contacts"));
         contactPickerIntent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE);
         startActivityForResult(contactPickerIntent, CONTACT_PICKER_REQUEST_CODE);

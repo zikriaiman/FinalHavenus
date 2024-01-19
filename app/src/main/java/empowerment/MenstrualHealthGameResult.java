@@ -16,7 +16,7 @@ public class MenstrualHealthGameResult extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menstrual_health_game_result);
 
-        // Initialize your TextView
+        // Initialize view
         scoreTextView = findViewById(R.id.scoreNumber);
 
         // Retrieve the score from the intent
